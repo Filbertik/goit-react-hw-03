@@ -1,0 +1,11 @@
+.container {
+  max-width: 704px;
+  margin: 0 auto;
+  text-align: center;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  row-gap: 12px;
+}
