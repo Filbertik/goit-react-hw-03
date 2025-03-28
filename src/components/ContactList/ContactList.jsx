@@ -1,18 +1,21 @@
-import ContactItem from "../ContactItem/ContactItem";
+// import ContactItem from "../ContactItem/ContactItem";
+import Contact from "../Contact/Contact";
 import styles from "./ContactList.module.css";
 
-const ContactList = ({ contacts, onDeleteContact }) => (
-  <ul className={styles.list}>
-    {contacts.map(({ id, name, number }) => (
-      <ContactItem
-        key={id}
-        id={id}
-        name={name}
-        number={number}
-        onDelete={onDeleteContact}
-      />
-    ))}
-  </ul>
-);
+const ContactList = ({ contacts, onDelete }) => {
+  return (
+    <ul className={styles.list}>
+      {contacts.map(({ id, name, number }) => (
+        <Contact
+          key={id}
+          id={id}
+          name={name}
+          number={number}
+          onDelete={onDelete}
+        />
+      ))}
+    </ul>
+  );
+};
 
 export default ContactList;

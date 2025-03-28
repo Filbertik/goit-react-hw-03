@@ -1,23 +1,19 @@
 .item {
-  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
   border-bottom: 1px solid #ccc;
   gap: 10px;
+  border-radius: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
   border: 2px solid #ccc;
-  border-radius: 14px;
   width: calc(33.33% - 20px);
   min-width: 250px;
   text-align: center;
-  /* background: #f9f9f9; */
   transition: transform 0.2s ease-in-out, border-color 0.3s;
+  flex-direction: row;
 }
 
 .contactInfo {
@@ -47,23 +43,6 @@ button:hover {
   list-style: none;
 }
 
-/* смисч */
-.item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  width: calc(33.33% - 20px);
-  min-width: 250px;
-  text-align: center;
-  /* background: #f9f9f9; */
-  transition: transform 0.2s ease-in-out, border-color 0.3s;
-  flex-direction: row;
-}
-
 .item:hover {
   transform: scale(1.05);
   border-color: #007bff;
@@ -82,7 +61,6 @@ button:hover {
 }
 
 button {
-  /* background: red; */
   color: white;
   border: none;
   cursor: pointer;

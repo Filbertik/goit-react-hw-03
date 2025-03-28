@@ -2,3 +2,23 @@
   list-style: none;
   padding: 0;
 }
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px;
+  list-style: none;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
