@@ -7,15 +7,15 @@ const ContactForm = ({ onAddContact }) => {
   const initialValues = { name: "", number: "" };
   const validationSchema = Yup.object({
     name: Yup.string()
-      .min(3, "Мінімум 3 символи")
-      .max(50, "Максимум 50 символів")
-      .required("Обов'язкове поле"),
+      .min(3, "Push min 3 symbols")
+      .max(50, "Max 50 symbols")
+      .required("Required field"),
     number: Yup.string()
       .matches(
         /^\+?\d{1,4}?[.-\s]?\(?\d{1,3}?\)?[.-\s]?\d{1,4}[.-\s]?\d{1,4}$/,
-        "Невірний формат номера"
+        "Invalid number format"
       )
-      .required("Обов'язкове поле"),
+      .required("Required field"),
   });
 
   const handleSubmit = (values, { resetForm }) => {
@@ -31,12 +31,12 @@ const ContactForm = ({ onAddContact }) => {
     >
       <Form className={styles.form}>
         <div className={styles.field}>
-          <label>Ім'я</label>
+          <label>Name</label>
           <Field type="text" name="name" />
           <ErrorMessage name="name" component="div" className={styles.error} />
         </div>
         <div className={styles.field}>
-          <label>Номер телефону</label>
+          <label>Phone number</label>
           <Field type="tel" name="number" />
           <ErrorMessage
             name="number"
@@ -44,7 +44,7 @@ const ContactForm = ({ onAddContact }) => {
             className={styles.error}
           />
         </div>
-        <button type="submit">Додати контакт</button>
+        <button type="submit">Add contact</button>
       </Form>
     </Formik>
   );

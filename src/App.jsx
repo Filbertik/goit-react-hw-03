@@ -24,7 +24,7 @@ const App = () => {
           contact.name.toLowerCase() === newContact.name.toLowerCase()
       )
     ) {
-      alert(`${newContact.name} вже є в контактах.`);
+      alert(`${newContact.name} exest in contacts`);
       return;
     }
     setContacts((prevContacts) => [newContact, ...prevContacts]);
@@ -42,7 +42,7 @@ const App = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Телефонна книга</h1>
+      <h1>Phonebook</h1>
       <ContactForm onAddContact={addContact} />
       <SearchBox value={filter} onChange={(e) => setFilter(e.target.value)} />
       <ContactList
